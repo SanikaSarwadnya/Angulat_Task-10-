@@ -1,0 +1,19 @@
+<h1 class="container" [ngClass]="'h1'">This is Product Component</h1>
+<div class="container text-center">
+   <table>
+        <tr class="container text-center bg-primary">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+        </tr>
+        <tr class="container text-center  bg-info" *ngFor="let i of product">
+            <td><ul class="list-group"><li class="list-group-item list-group-item-warning">{{i.pid}}</li></ul></td>
+            <td><ul class="list-group"><li class="list-group-item list-group-item-success">{{i.pname}}</li></ul></td>
+            <td><ul class="list-group"><li class="list-group-item list-group-item-info">{{i.price}}</li></ul></td>
+            <td><ul class="list-group"><li class="list-group-item list-group-item-warning">{{i.qty}}</li></ul></td>
+            
+        </tr>
+    </table>
+</div>
+

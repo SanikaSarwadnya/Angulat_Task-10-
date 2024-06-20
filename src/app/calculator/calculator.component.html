@@ -1,0 +1,38 @@
+<h1 class="container">Calculator</h1>
+<div class="container">
+    <form>
+    
+        <tr>
+            <td>First Number:-</td>
+            <td>
+                <input type="number" #t1>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>Second Number:-</td>
+            <td>
+                <input type="number" #t2>
+            </td>
+        </tr>
+        <br>
+        
+            
+            
+                <button class="btn btn-info m-2" (click)="add(t1.value,t2.value)">Addition</button>
+            
+           
+            
+                <button class="btn btn-primary m-2" (click)="sub(t1.value,t2.value)">Subtraction</button>
+            
+            
+                <button class="btn btn-success m-2" (click)="mul(t1.value,t2.value)">Multiplication</button>
+            
+            
+                <button class="btn btn-warning" (click)="div(t1.value,t2.value)">Division</button>
+            
+        
+        
+        <p>Result:{{result}}</p>
+
+

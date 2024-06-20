@@ -1,0 +1,19 @@
+<h1 [ngClass]="'h1'">User Profile</h1>
+<!-- <p [innerHtml]='msg'>Message</p>
+<p> <img [src]='img' height="150px" width="150px"></p> -->
+<div class="container">
+    <table class="table table-bordered table-striped table-hover">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr *ngFor="let i of UserProfile" class="container">
+            <th>{{i.id}}</th>
+            <th>{{i.name}}</th>
+           <th>{{i.Age}}</th>
+           <th>{{i.City}}</th>
+        </tr>
+    </table>
+</div>

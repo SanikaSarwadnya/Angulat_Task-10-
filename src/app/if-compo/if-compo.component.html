@@ -1,0 +1,9 @@
+<div>
+    <button class="btn btn-info " (click)="toggleMessage()" >Toggle Message</button>
+    <ng-template [ngIf]="showMessage" [ngIfElse]="hiddenMessage">
+      <p [ngStyle]="{'color':'red'}">Hello, this is a message!</p>
+    </ng-template>
+    <ng-template #hiddenMessage>
+      <p>The message is hidden.</p>
+    </ng-template>
+  </div>

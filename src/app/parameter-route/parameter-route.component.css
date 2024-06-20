@@ -1,0 +1,11 @@
+.h1{
+
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 36px;                  /* Font size */
+    font-weight: bold;                /* Font weight */
+    background-color: #b936e8cf; 
+    color: white;                     /* Font color */
+    text-align: center;               /* Center align text */
+    margin: 20px 0;                   /* Margin above and below */
+    line-height: 1.2; 
+}

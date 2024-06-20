@@ -1,0 +1,83 @@
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
+    <div class="mb-3 w-50 container">
+      <label for="username" 
+      class="form-label">User Name</label>
+      <input type="text" 
+             class="form-control"
+             name="username" 
+             autocomplete="off"
+             [(ngModel)]="form.username"
+             #username="ngModel"
+             required
+             minlength="4"
+             maxlength="10"
+             pattern="(^[A-Z]{1,1})+([a-z]{1,19})$"
+             id="username" 
+             [ngClass]="{'is-invalid':f.submitted && username.errors}"
+             >
+       <div *ngIf="f.submitted && username.errors" class="invalid-feedback">
+        <div *ngIf="username.errors['required']">UserName is required
+       </div>
+       <div *ngIf="username.errors['minlength']">UserName must be at least 4 characters
+      </div>
+      <div *ngIf="username.errors['maxlength']">UserName maxlength length 10 charcters only
+      </div>
+      <div *ngIf="username.errors['pattern']">Pattern Does not Matched..First letter should be capital
+      </div>
+      </div>
+    </div> 
+      <div class="mb-3 w-50 container">
+      <label for="Email" 
+      class="form-label">Email id</label>
+      <input type="text" 
+             class="form-control"
+             name="Email" 
+             autocomplete="off"
+             [(ngModel)]="form.Email"
+             #Email="ngModel"
+             required
+             minlength="4"
+             maxlength="50"
+             pattern="(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{0,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|in|org|usa|fr|edu)$"
+             id="Email" 
+             [ngClass]="{'is-invalid':f.submitted && Email.errors}"
+             >
+       <div *ngIf="f.submitted && Email.errors" class="invalid-feedback">
+        <div *ngIf="Email.errors['required']">Email is required
+       </div>
+       <div *ngIf="Email.errors['minlength']">Email must be at least 4 characters
+      </div>
+      <div *ngIf="Email.errors['maxlength']">Email maxlength length 50 charcters only
+      </div>
+      <div *ngIf="Email.errors['pattern']">Email Pattern does not matched..
+      </div>
+      </div>
+    </div> 
+    <div class="mb-3 w-50 container">
+      <label for="password" 
+      class="form-label">Password</label>
+      <input type="text" 
+             class="form-control"
+             name="password" 
+             autocomplete="off"
+             [(ngModel)]="form.password"
+             #password="ngModel"
+             required
+             minlength="4"
+             maxlength="10"
+             id="password" 
+             [ngClass]="{'is-invalid':f.submitted && password.errors}"
+             >
+       <div *ngIf="f.submitted && password.errors" class="invalid-feedback">
+        <div *ngIf="password.errors['required']">password is required
+       </div>
+       <div *ngIf="password.errors['minlength']">password must be at least 4 characters
+      </div>
+      <div *ngIf="password.errors['maxlength']">password maxlength length 8 charcters only
+      </div>
+      </div>
+    </div> 
+      <div class="container text-center">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </form>
